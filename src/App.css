@@ -14,19 +14,24 @@
 /* --- 2. GENERAL LAYOUT & BODY --- */
 html, body, #root {
   height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;       /* full screen height, handles mobile browsers too */
+  display: grid;
+  place-items: center;      /* centers content vertically & horizontally */
+  padding: 2rem;            /* optional: avoid touching edges on small screens */
 }
 
 body {
-  margin: 0;
   font-family: 'Figtree', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   display: flex;
-  justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
-  min-height: 100vh;
+  justify-content: center; /* center vertically */
+  align-items: center;     /* center horizontally */
 }
-
 
 /* --- 3. MAIN APP STRUCTURE --- */
 .app-container {
@@ -39,7 +44,6 @@ body {
   max-width: 800px;
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin: auto;
 }
 
 .qr-panel {
