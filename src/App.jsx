@@ -3,7 +3,7 @@ import QRCodeStyling from 'qr-code-styling'
 import './App.css'
 
 function App() {
-  const [url, setUrl] = useState('https://gemini.google.com');
+  const [url, setUrl] = useState('https://google.com');
   const [dotColor, setDotColor] = useState('#F9FAFB');
   const [backgroundColor, setBackgroundColor] = useState('#1F2937');
   const [dotStyle, setDotStyle] = useState('rounded');
