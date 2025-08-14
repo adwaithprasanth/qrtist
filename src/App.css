@@ -1,0 +1,196 @@
+/* --- 1. FONT & COLOR PALETTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap');
+
+:root {
+  --bg-color: #111827; /* Dark blue-gray background */
+  --surface-color: #1F2937; /* Lighter gray for the card */
+  --border-color: #374151; /* Subtle border */
+  --text-primary: #F9FAFB; /* Off-white for main text */
+  --text-secondary: #9CA3AF; /* Gray for labels */
+  --accent-color: #3B82F6; /* A nice blue for the main button */
+  --accent-hover: #2563EB; /* Darker blue for hover */
+}
+
+/* --- 2. GENERAL LAYOUT & BODY --- */
+body {
+  margin: 0;
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- 3. MAIN APP STRUCTURE --- */
+.app-container {
+  background-color: var(--surface-color);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.qr-panel {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.qr-code-container {
+  border-radius: 8px;
+  overflow: hidden; /* Ensures QR code corners are rounded if needed */
+}
+
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* --- 4. TYPOGRAPHY & FORMS --- */
+h1 {
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.control-group {
+  margin-bottom: 1rem;
+}
+
+.control-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Base styles for input and select */
+.input-base {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: 'Figtree', sans-serif;
+  box-sizing: border-box; /* Important for consistent sizing */
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none; /* Hides the default dropdown arrow */
+}
+
+select.input-base {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%239CA3AF' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25em;
+  padding-right: 2.5rem; /* Make space for the new arrow */
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Specifics for color picker */
+.color-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+.color-input-wrapper input[type="color"] {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+.color-input-wrapper span {
+    color: var(--text-secondary);
+}
+
+
+/* --- 5. DOWNLOAD BUTTON --- */
+.download-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: auto; /* Pushes button to the bottom */
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.download-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.download-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- 6. FOOTER --- */
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- 7. RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem; /* Add some space on smaller screens */
+    align-items: flex-start;
+  }
+
+  .app-container {
+    flex-direction: column; /* Stack panels vertically */
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .qr-panel {
+    align-self: center; /* Center the QR code in the column */
+  }
+
+  h1 {
+    text-align: center; /* Center title on mobile */
+  }
+
+  .footer {
+    position: relative; /* Let footer sit naturally at the bottom */
+    bottom: auto;
+    margin-top: 2rem;
+  }
+}
