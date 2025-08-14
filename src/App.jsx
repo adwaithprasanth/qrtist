@@ -45,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="page-wrapper">
+    <>
       <div className="app-container">
         <div className="qr-panel">
           <div className="qr-code-container" ref={ref}></div>
@@ -103,7 +103,13 @@ function App() {
           </button>
         </div>
       </div>
-    </div>
+
+      <footer className="footer">
+        <p>
+          Made by Adwaith Prasanth | <a href="https://github.com/adwaithprasanth" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </footer>
+    </>
   )
 }
 

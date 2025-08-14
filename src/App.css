@@ -2,25 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap');
 
 :root {
-  --bg-color: #111827; /* Dark blue-gray background */
-  --surface-color: #1F2937; /* Lighter gray for the card */
-  --border-color: #374151; /* Subtle border */
-  --text-primary: #F9FAFB; /* Off-white for main text */
-  --text-secondary: #9CA3AF; /* Gray for labels */
-  --accent-color: #3B82F6; /* A nice blue for the main button */
-  --accent-hover: #2563EB; /* Darker blue for hover */
+  --bg-color: #111827;
+  --surface-color: #1F2937;
+  --border-color: #374151;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --accent-color: #3B82F6;
+  --accent-hover: #2563EB;
 }
 
 /* --- 2. GENERAL LAYOUT & BODY --- */
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Figtree', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 /* --- 3. MAIN APP STRUCTURE --- */
@@ -46,7 +50,7 @@ body {
 
 .qr-code-container {
   border-radius: 8px;
-  overflow: hidden; /* Ensures QR code corners are rounded if needed */
+  overflow: hidden;
 }
 
 .controls-panel {
@@ -73,7 +77,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-/* Base styles for input and select */
 .input-base {
   width: 100%;
   padding: 12px;
@@ -83,9 +86,9 @@ h1 {
   color: var(--text-primary);
   font-size: 1rem;
   font-family: 'Figtree', sans-serif;
-  box-sizing: border-box; /* Important for consistent sizing */
+  box-sizing: border-box;
   transition: border-color 0.2s, box-shadow 0.2s;
-  appearance: none; /* Hides the default dropdown arrow */
+  appearance: none;
 }
 
 select.input-base {
@@ -93,7 +96,7 @@ select.input-base {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 1.25em;
-  padding-right: 2.5rem; /* Make space for the new arrow */
+  padding-right: 2.5rem;
 }
 
 .input-base:focus {
@@ -102,7 +105,6 @@ select.input-base {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
-/* Specifics for color picker */
 .color-input-wrapper {
   display: flex;
   align-items: center;
@@ -124,12 +126,11 @@ select.input-base {
     color: var(--text-secondary);
 }
 
-
 /* --- 5. DOWNLOAD BUTTON --- */
 .download-btn {
   width: 100%;
   padding: 14px;
-  margin-top: auto; /* Pushes button to the bottom */
+  margin-top: auto;
   background-color: var(--accent-color);
   color: white;
   border: none;
@@ -150,12 +151,11 @@ select.input-base {
 
 /* --- 6. FOOTER --- */
 .footer {
-  position: absolute;
-  bottom: 1rem;
   width: 100%;
   text-align: center;
   color: var(--text-secondary);
   font-size: 0.9rem;
+  padding: 2rem 0 1rem 0; /* Add space between card and footer */
 }
 
 .footer a {
@@ -165,32 +165,4 @@ select.input-base {
 }
 .footer a:hover {
     text-decoration: underline;
-}
-
-/* --- 7. RESPONSIVE DESIGN --- */
-@media (max-width: 768px) {
-  body {
-    padding: 1rem; /* Add some space on smaller screens */
-    align-items: flex-start;
-  }
-
-  .app-container {
-    flex-direction: column; /* Stack panels vertically */
-    padding: 1.5rem;
-    gap: 2rem;
-  }
-
-  .qr-panel {
-    align-self: center; /* Center the QR code in the column */
-  }
-
-  h1 {
-    text-align: center; /* Center title on mobile */
-  }
-
-  .footer {
-    position: relative; /* Let footer sit naturally at the bottom */
-    bottom: auto;
-    margin-top: 2rem;
-  }
 }
