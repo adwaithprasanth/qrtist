@@ -21,10 +21,12 @@ body {
   font-family: 'Figtree', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
-  display: flex; /* Make the body a flex container */
-  flex-direction: column; /* Stack children vertically */
-  min-height: 100vh; /* Make body at least the full screen height */
+  display: flex;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  min-height: 100vh;
 }
+
 
 /* --- 3. MAIN APP STRUCTURE --- */
 .app-container {
