@@ -103,12 +103,6 @@ function App() {
           </button>
         </div>
       </div>
-
-      <footer className="footer">
-        <p>
-          Made by Adwaith Prasanth | <a href="https://github.com/adwaithprasanth" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </p>
-      </footer>
     </>
   )
 }
