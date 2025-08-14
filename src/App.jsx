@@ -53,7 +53,7 @@ function App() {
         <div className="controls-panel">
           <h1>QRtist</h1>
           <div className="control-group">
-            <label>Your URL</label>
+            <label>Your URL/text</label>
             <input
               type="text"
               value={url}
