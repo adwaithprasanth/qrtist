@@ -16,8 +16,4 @@ Turn your links into art. **qrtist** is a simple, React-based QR code generator 
 
 ## 📸 Screenshot
 
-### Option 1: Relative path (preferred)
 ![Homepage](./assets/Screenshot.png)
-
-### Option 2: Direct GitHub raw link (backup)
-![Homepage](https://raw.githubusercontent.com/adwaithprasanth/qrtist/main/assets/Screenshot.png)
