@@ -13,3 +13,7 @@ Turn your links into art. **qrtist** is a simple, React-based QR code generator 
 - Responsive and lightweight
 
 ---
+
+## 📸 Screenshot
+
+![Homepage](assets/Screenshot.png)
