@@ -10,7 +10,6 @@ Turn your links into art. **qrtist** is a simple, React-based QR code generator 
 - Choose custom **background color** and **dot color**
 - Select different **dot styles** for a unique look
 - Instant preview as you customize
-- Responsive and lightweight
 
 ---
 
